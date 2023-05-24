@@ -1,0 +1,234 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+:root {
+  /* 
+        colors,fs,etc.etc 
+  o call ka nalang using var(tas pili ka below) 
+  o 
+  */
+  --primary-color: #0b2447;
+  --secondary-color: #19376d;
+  --tertiary-color: #576cbc;
+  --white: rgb(240, 250, 240);
+  --title-fontsize: 35px;
+  --subheading-fontsize-h1: 28px;
+  --subheading-fontsize-h2: 25px;
+  --regular-fontsize: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(240, 250, 240, 0.7),
+      rgba(129, 171, 255, 0.5)
+    ),
+    url("/yar.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.nav {
+  position: fixed center;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 13px 70px;
+  margin-bottom: 2em;
+  background: var(--tertiary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav,
+.nav .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav {
+  justify-content: space-around;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.nav .brand-name {
+  font-size: var(--title-fontsize);
+  font-weight: 600;
+}
+.nav .nav-links {
+  column-gap: 35px;
+  list-style: none;
+}
+.nav .nav-links a {
+  transition: all 0.2s linear;
+}
+
+.nav-links a {
+  font-size: var(--subheading-fontsize-h2);
+}
+
+.logo-png {
+  width: 70px;
+  height: auto;
+}
+
+.container {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 15px 25px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.container header {
+  position: relative;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+}
+.container header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 7px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: var(--tertiary-color);
+}
+.container form {
+  position: relative;
+  margin-top: 16px;
+  min-height: 490px;
+  background-color: #fff;
+  overflow: hidden;
+}
+/* eto yung mga naka tago atn */
+.container form .form {
+  /* position: absolute; */
+  background-color: #fff;
+  transition: 0.3s ease;
+}
+
+.container form .title {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 6px 0;
+  color: #333;
+}
+.container form .fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form .fields .input-field {
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin: 4px 0;
+}
+.input-field,
+.input-field-img label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+.input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 42px;
+  margin: 8px 0;
+}
+.input-field input :focus,
+.input-field select:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+.input-field select,
+.input-field input[type="date"] {
+  color: #707070;
+}
+.input-field input[type="date"]:valid {
+  color: #333;
+}
+
+form .fields .input-field-img {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0;
+}
+
+.input-field-img input {
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  padding: 0 15px;
+  height: 42px;
+  margin: 15px -15px;
+}
+
+.container form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  max-width: 150px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 8px;
+  margin: 10px 0;
+  background-color: var(--tertiary-color);
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.container form .btnText {
+  font-size: 14px;
+  font-weight: 400;
+}
+form button:hover {
+  background-color: #265df2;
+}
+form button i {
+  margin: 0 10px;
+}
+
+/* responsiveeezzzz */
+@media (max-width: 750px) {
+  .container form {
+    overflow-y: scroll;
+  }
+  .container form::-webkit-scrollbar {
+    display: none;
+  }
+  form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+}
+
+@media (max-width: 550px) {
+  form .fields .input-field {
+    width: 100%;
+  }
+}

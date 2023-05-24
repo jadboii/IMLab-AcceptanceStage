@@ -1,0 +1,609 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Teko', sans-serif;
+}
+
+body{
+    overflow: auto;
+}
+
+h4{
+    font-weight: 800;
+    color: rgb(19, 36, 78);
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(129, 171, 255, 0.3)), url('EDSA_-_Pasay_Tramo_(Pasay)(2017-08-04)_(3).jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+nav{
+    padding-top: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 200px;
+    line-height: 60px;
+    z-index: 111;
+}
+
+#brngyPic{
+    padding-bottom: 5px;
+}
+
+.brngyLbl{
+    display: flex;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: 800;
+    color: rgba(57, 75, 120, 1);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.navItems{
+    display: flex;
+}
+
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.navItems li a{
+    font-size: 25px;
+    color: rgba(57, 75, 120, 1);
+    letter-spacing: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navItems li a::after{
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: rgb(33, 42, 65);
+    margin: auto;
+    display: block;
+}
+
+.navItems li a:hover::after{
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.navItems li a:hover{
+    color: rgb(45, 61, 101);
+}
+
+.logo{
+    position:relative;
+    top: -10px;
+}
+
+#officials{
+    border: none;
+    background-color: white;
+    height:700px;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.5);
+}
+
+#official-lbl{
+    background-color: rgba(57, 75, 120, 1);
+    padding: 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 300;
+}
+ 
+
+
+
+.row1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    bottom: 5px;
+    padding-top: 50px;
+}
+
+.row1 h2,
+.row1 p{
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.row1 img{
+    display: block;
+    margin: auto;
+}
+
+.row2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px;
+    padding: 20px;
+    padding-top: 50px;
+}
+
+.row2 h2,
+.row2 p{
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.row1 p{
+    font-style: italic;
+}
+
+.row2 p{
+    font-style: italic;
+
+}
+
+.row2 img{
+    display: block;
+    margin: auto;
+}
+.row3 {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: 5px;
+    padding: 2px;
+    padding-top: 50px;
+    gap: 0.5px;
+}
+
+.row3 p {
+    font-style: italic;
+}
+
+.row3 img {
+    display: block;
+    margin: auto;
+}
+
+.row3 h2,
+.row3 p {
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+}
+
+
+
+#DataContainer{
+    border: none;
+    background-color: white;
+    min-height: 700px;
+    padding: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0    .5);
+    border-radius: 5px;
+}
+
+.table-bordered{
+    padding-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #636363;
+  }
+
+::-webkit-scrollbar-track{
+    background-color: rgba(109, 109, 109, 0);
+    border-radius: 10px;
+    width: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+.table-bordered td{
+    text-align: center; 
+    font-weight: 400;
+    background-color: rgb(233, 233, 233);
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+    width: 700px;
+}
+
+.table-bordered th[scope="row"] {
+    text-align: center; 
+    font-weight: 400;
+    background-color: rgb(233, 233, 233);
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+    width: 700px;
+}
+
+.tbl-colHeader{
+    text-align: center;
+    background-color: rgb(56, 61, 74);
+    font-weight: 400;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+    width: 700px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.tbl-colHeader:hover{
+    text-align: center;
+    background-color: rgb(26, 28, 35);
+    font-weight: 400;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    margin: auto;
+    justify-content: center;
+    padding: 5px;
+    width: 700px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+
+.btnEdit{
+    border-width: thick;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(51, 89, 202);
+    text-decoration: none;
+    color: white;
+}
+
+.btnDel{
+    border-width: thick;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(128, 46, 49);
+    text-decoration: none;
+    color: white;
+}
+
+.formSection1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+#formSection1 label,
+#formSection1 input {
+    margin-bottom: 10px;
+    display: block;
+}
+
+form label{
+    padding: 2.5px;
+    font-size: 25px;
+    margin: auto;
+    display: inline-block;
+}
+
+.search-container input{
+    height: 50px;
+    min-width: 100%;
+    padding: 15px;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px;
+}
+
+#DataContainer2{
+    width: 90%;
+    border: none;
+    background-color: white;
+    min-height: 680px;
+    padding: 10px;
+    margin: 0 auto;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.5);
+    border-radius: 5px;
+}
+
+.btnSec{
+    align-items: center;
+    justify-content: center;
+}
+
+.btnSec button{
+    margin-top: 15px;
+    display:block;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(86, 114, 185);
+    color: white;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 15px;
+    width: 200px;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.5);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+.btnSec button:hover, .btnSec button:focus, .btnSec button:active{
+    box-shadow: 4px 4px 14px rgba(0,0,0,0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.warningMsg{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    background-color: rgb(197, 98, 98);
+    border: 2px solid rgb(169, 38, 38);
+    border-radius: 6px;
+    color: rgb(250, 210, 210);
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.successMsg{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 10px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    background-color: rgb(124, 227, 143);
+    border: 2px solid rgb(115, 198, 129);
+    border-radius: 6px;
+    color: rgb(63, 109, 71);
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.floatParent{
+    position: fixed;
+    bottom: 80px;
+    right: 15px;
+    text-align: center;
+    color: rgb(215, 223, 241);
+    border-radius: 5px;
+    padding: 0;
+    border-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.5);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    box-shadow: 4px 4px 14px rgba(255, 255, 255, 0.8);
+    
+}
+
+.floatParent2{
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    text-align: center;
+    color: rgb(215, 223, 241);
+    border-radius: 5px;
+    padding: 0;
+    border-style: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.5);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    box-shadow: 4px 4px 14px rgba(255, 255, 255, 0.8);
+    
+}
+
+.floatParent .rightBtn{
+    width: 60px;
+    height: 60px;
+    background: url(print.png);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-color: rgb(86, 114, 185);
+    color: white;
+    background-size: 50px;
+    background-position: center;
+    float: left;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 -2px 3px -1px rgb(202, 210, 230);
+}
+
+.floatParent2 #LogoutBtn{
+    background-size: 50% 50%;
+    width: 60px;
+    height: 60px;
+    background: url(Logout.png);
+    background-size: 10px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-color: rgb(185, 86, 86);
+    color: white;
+    background-size: 50px;
+    background-position: center;
+    float: left;
+    margin: 0 auto;
+    cursor: pointer;
+    box-shadow: 0 -2px 3px -1px rgb(202, 210, 230);
+}
+
+.floatParent .rightBtn:hover, .floatParent .rightBtn:focus, .floatParent .rightBtn:active{
+    box-shadow: 4px 4px 14px rgba(217, 217, 217, 0.9999);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
+.reloadBtn-container{
+    display: flex;
+    align-items:  center;
+    justify-content: center;
+}
+
+.reloadBtn-container button{
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: rgb(86, 114, 185);
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    width: 50px;
+    border-style: none;
+    cursor: pointer;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.5);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+    height: 50px;
+}
+
+.reloadBtn-container button:hover, .reloadBtn-container button:focus, .reloadBtn-container button:active{
+    box-shadow: 4px 4px 14px rgba(0,0,0,0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.sort-container {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Align items vertically */
+  }
+
+.sort-container input[type="submit"] {
+    width: 20px;
+    background-color:  rgb(86, 114, 185);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+}
+
+.sort-container input[type="submit"]:hover, .sort-container input[type="submit"]:focus, .sort-container input[type="submit"]:active{
+    box-shadow: 4px 4px 14px rgba(0,0,0,0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.sort-container select{
+    color: black;
+    width: 500px;
+    height: 40px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 14px rgba(0,0,0,0.5);
+    border: none;
+}
+
+.sort-container input{
+    width: 300px;
+}
+
+#sortSubmit{
+    width: 300px;
+    border-radius: 5px;
+}
+
+.sort-container button.sortSubmitBtn {
+    background-color: rgb(40, 53, 86);
+    color: white;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 400px;
+}
+
+.sort-container button.sortSubmitBtn:hover {
+    background-color: rgb(40, 53, 86);
+    color: white;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    top: 400px;
+}
+
+
+.sort-container img{
+    padding-top: 5px;
+}
+
+.formAddRec input{
+    width: 10%;
+    color: black;
+    padding: 10px 20px;
+    cursor: text;
+    font-size: 13px;
+    margin: 10px;
+    border-radius: 5px; 
+    border: none;
+    box-shadow: 4px 4px 7px rgba(0,0,0,0.5);
+}
+
