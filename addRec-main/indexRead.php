@@ -163,7 +163,7 @@ include "config/read.php";
                     $i++;?>
                 <tr>
                     <th scope = "row"><?=$i?></th>
-                    <td><?php echo $rows['Status']?></td>
+                    <td><?php echo $rows['Stat']?></td>
                     <td><?=$rows['LastName']?></td>
                     <td><?php echo $rows['FirstName']?></td>
                     <td><?php echo $rows['MiddleName']?></td>
@@ -175,6 +175,7 @@ include "config/read.php";
                     <td><?php echo $rows['IssuedName']?></td>
                     <td><?php echo $rows['IssuedState']?></td>
                     <td><?php echo $rows['IssuedDate']?></td>
+                    <td><?php echo $rows['ExpiryDate']?></td>
                     <td><?php echo $rows['AddressType']?></td>
                     <td><?php echo $rows['Nationality']?></td>
                     <td><?php echo $rows['Province']?></td>

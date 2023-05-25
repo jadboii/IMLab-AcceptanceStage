@@ -12,6 +12,7 @@ function validateInput($input) {
 }
 
 // Validate and sanitize form data
+$status = validateInput($_POST['Stat']);
 $firstName = validateInput($_POST['FirstName']);
 $middleName = validateInput($_POST['MiddleName']);
 $lastName = validateInput($_POST['LastName']);
@@ -35,18 +36,23 @@ $mothername = validateInput($_POST['MotherName']);
 $emergencycontact = validateInput($_POST['EmergencyContNum']);
 $nameofcontact = validateInput($_POST['ContactName']);
 $relationship = validateInput($_POST['Relationship']);
+$scnum = validateInput($_POST['ScNum']);
 $bloodtype = isset($_POST['BloodType']) ? validateInput($_POST['BloodType']) : '';
 
 // ... add more variables for other form fields
 
 // Validate input
 $errors = [];
+if (empty($status)) {
+    $errors[] = "Status is required.";
+}
+
 if (empty($firstName)) {
     $errors[] = "First name is required.";
 }
 
 if (empty($middleName)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Middle name is required.";
 }
 
 if (empty($lastName)) {
@@ -54,87 +60,91 @@ if (empty($lastName)) {
 }
 
 if (empty($age)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Age is required.";
 }
 
 if (empty($gender)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Gender is required.";
 }
 
 if (empty($birthdate)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Birth date is required.";
 }
 
 if (empty($idType)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "ID type is required.";
 }
 
 if (empty($idnum)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "ID Number is required.";
 }
 
 if (empty($issuedname)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Issued name is required.";
 }
 
 if (empty($issuedstate)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Issued state required.";
 }
 
 if (empty($issuedate)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Issued date is required.";
 }
 
 if (empty($expirydate)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Expiry Date is required.";
 }
 
 if (empty($addresstype)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Address type is required.";
 }
 
 if (empty($nationality)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Nationality is required.";
 }
 
 if (empty($province)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Province is required.";
 }
 
 if (empty($city)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "City is required.";
 }
 
 if (empty($street)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Street is required.";
 }
 
 if (empty($housenumber)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "House number is required.";
 }
 
 if (empty($fathername)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Father name is required.";
 }
 
 if (empty($mothername)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Mother name is required.";
 }
 
 if (empty($emergencycontact)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Emergency contact number is required.";
 }
 
 if (empty($nameofcontact)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Name of contact is required.";
 }
 
 if (empty($relationship)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Relationship is required.";
+}
+
+if (empty($scnum)) {
+    $errors[] = "Senior citizen number is required.";
 }
 
 if (empty($bloodtype)) {
-    $errors[] = "Last name is required.";
+    $errors[] = "Blood type is required.";
 }
 // ... add validation rules for other fields
 
@@ -149,9 +159,9 @@ if (!empty($errors)) {
 }
 
 // Prepare and execute the SQL statement
-$sql = "INSERT INTO tblscreg (FirstName, MiddleName, LastName, Age, Gender, BirthDate,
+$sql = "INSERT INTO tblscreg (Stat, FirstName, MiddleName, LastName, Age, Gender, BirthDate,
 IdType, IdNum, IssuedName, IssuedState, IssuedDate, ExpiryDate, AddressType, Nationality, Province, 
-City, Street, HouseNum, FatherName, MotherName, EmergencyContNum, ContactName, Relationship, BloodType) 
+City, Street, HouseNum, FatherName, MotherName, EmergencyContNum, ContactName, Relationship, ScNum, BloodType) 
 VALUES ('$firstName', '$middleName', '$lastName', '$age', '$gender', '$birthdate', '$idType', '$idnum',
 '$issuedname', '$issuedstate', '$issuedate' , '$expirydate', '$addresstype', '$nationality', '$province', '$city', '$street', 
 '$housenumber', '$fathername', '$mothername', '$emergencycontact', '$nameofcontact', '$relationship', '$bloodtype')";
